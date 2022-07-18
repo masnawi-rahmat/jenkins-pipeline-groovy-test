@@ -18,3 +18,7 @@ stage('Stage 2') {
   println "Hello Again"
 }
 
+stage('Execute')
+  pipeline = load 
+  pipeline.execute()
+}
