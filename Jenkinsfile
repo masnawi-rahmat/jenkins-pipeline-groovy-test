@@ -25,13 +25,13 @@ stage('Stage 2') {
 
 
 stage('Read Steps File') {
-  steps {
-    script {
+  //steps {
+    //script {
       //def data = readFile(file: 'zorg.txt')
       def data = readFile(file: 'steps.txt')
       //data.split('\n') 
       println(data)
       //println(line)
-      }
-   }
+      //}
+   //}
 }
