@@ -19,6 +19,6 @@ stage('Stage 2') {
 }
 
 stage('Read Step File') {
-  readstepfile = readFile 'step.txt'
+  readstepfile = readFile('step.txt')
   println readstepfile
 }
