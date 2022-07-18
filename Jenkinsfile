@@ -1,4 +1,4 @@
-//def code
+def pipeline
 
 node {
   stage('Checkout') {
@@ -6,15 +6,11 @@ node {
   }
 
   stage('Load') {
-    code = load 'example.groovy'
+    pipeline = load 'example.groovy'
+    pipeline.example1()
   }
-
-  stage('Execute') {
-    code.example1()
-  }
-}
-   //code.example2()
-
+  pipeline.example2()
+  
 /*  
 node {
     stage('test') {
