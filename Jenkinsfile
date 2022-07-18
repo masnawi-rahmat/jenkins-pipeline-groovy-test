@@ -10,11 +10,3 @@ node {
     pipeline.example1()
   }
   pipeline.example2()
-  
-/*  
-node {
-    stage('test') {
-        echo 'hello'
-    }
-} 
-*/
