@@ -18,7 +18,7 @@ stage('Stage 2') {
   println "Hello Again"
 }
 
-stage('Execute')
+stage('Execute') {
   pipeline = load 'test.groovy'
   pipeline.execute()
 }
