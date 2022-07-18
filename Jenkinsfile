@@ -18,7 +18,7 @@ stage('Stage 2') {
   println "Hello Again"
 }
 
-stage('Execute') {
-  pipeline = load 'test.groovy'
-  pipeline.example1()
+stage('Read Step File') {
+  readstepfile = readFile 'step.txt'
+  println readstepfile
 }
