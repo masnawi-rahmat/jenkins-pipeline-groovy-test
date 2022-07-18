@@ -20,5 +20,5 @@ stage('Stage 2') {
 
 stage('Execute') {
   pipeline = load 'test.groovy'
-  pipeline.execute()
+  pipeline.example1()
 }
