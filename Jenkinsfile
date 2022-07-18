@@ -18,7 +18,7 @@ stage('Stage 2') {
   println "Hello Again"
 }
 
-stage('Read Step File') {
-  readstepfile = readFile('step.txt')
+stage('Read Steps File') {
+  readstepfile = readFile('steps.txt')
   println readstepfile
 }
