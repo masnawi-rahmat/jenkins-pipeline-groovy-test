@@ -1,4 +1,4 @@
-def code
+//def code
 
 node {
   stage('Checkout') {
@@ -14,7 +14,7 @@ node {
   }
 }
 
-code.example2()
+//code.example2()
 
 /* 
 node {
