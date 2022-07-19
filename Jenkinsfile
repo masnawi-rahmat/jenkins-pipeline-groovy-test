@@ -19,8 +19,8 @@ pipeline {
       
       stage('readfile') {
          steps {
-            def readfile = readFile(file: 'steps.txt')
-               println(readfile)
+            def readimage = readFile(file: 'steps.txt')
+                println(readimage)
                } 
              }
            }
