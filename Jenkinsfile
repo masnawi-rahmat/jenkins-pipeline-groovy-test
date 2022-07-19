@@ -1,6 +1,6 @@
-//#!groovy
+#!groovy
 
-pipeline{
+pipeline {
   agent any
   stage('Hello') {
   println("Hello World")
