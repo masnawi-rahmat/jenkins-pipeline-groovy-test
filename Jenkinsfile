@@ -1,7 +1,7 @@
 #!groovy
 
 pipeline {
-   agent {any}
+   agent any
    stages {
        stage('clearspace') {
            steps {
@@ -13,6 +13,6 @@ pipeline {
        stage('hello') {
            steps {
               println ("hello world")
-            }
-        }
-}
+              }
+          }
+      }
