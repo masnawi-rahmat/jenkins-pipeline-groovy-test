@@ -5,14 +5,17 @@ pipeline {
    stages {
        
       stage('clearspace') {
-           steps {
-               println ("clearing space now")
-               cleanWs()
+         steps {
+            println ("clearing space now")
+            cleanWs()
                }
             }
          }
       
-    stage('hello') {
-        println("hello world")    
+      stage('hello') {
+         steps {
+            println("hello world")    
            }
+         }
 }
+ 
