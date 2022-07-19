@@ -10,7 +10,7 @@ pipeline {
              }
            }
       
-      stage('ls') {
+      stage('check list of files and working dir') {
          steps {
             script {
                sh "ls -la"
