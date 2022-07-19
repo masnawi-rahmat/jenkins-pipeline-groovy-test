@@ -18,6 +18,10 @@ pipeline {
                    } 
                 }
               }
+       
+      stage('readfile') {
+         steps {
+         
             }
          }
          
