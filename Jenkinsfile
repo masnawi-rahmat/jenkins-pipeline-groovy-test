@@ -23,10 +23,9 @@ stage('Stage 2') {
   println(readstepfile)
 }*/
 
-
 stage('Read Steps File') {
-  //steps {
-    //script {
+  steps {
+    script {
       //def data = readFile(file: 'zorg.txt')
       def data = readFile(file: 'steps.txt')
       //data.split('\n') 
@@ -34,4 +33,7 @@ stage('Read Steps File') {
       //println(line)
       //}
    //}
+
+    }
+  }
 }
