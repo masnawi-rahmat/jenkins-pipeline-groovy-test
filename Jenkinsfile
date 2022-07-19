@@ -11,4 +11,8 @@ pipeline {
                }
             }
          }
-     }
+      
+      stage('hello') {
+        println("hello world")    
+           }
+}
