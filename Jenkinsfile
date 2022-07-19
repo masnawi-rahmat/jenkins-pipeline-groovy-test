@@ -1,4 +1,4 @@
-#!groovy
+ #!groovy
 
 pipeline {
    agent any
@@ -9,6 +9,7 @@ pipeline {
                }
            }
        }
+  }
                           
        /*stage('hello') {
            steps {
