@@ -4,7 +4,7 @@ pipeline {
    agent any
    stages {
        
-      stage ('clearspace') {
+      stage('clearspace') {
          steps {
             println ("clearing space now")
             cleanWs()
@@ -12,7 +12,7 @@ pipeline {
             }
          }
     
-      stage ('hello') {
+      stage('hello') {
          steps {
             println ("hello world")
              }
