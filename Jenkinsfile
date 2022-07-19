@@ -17,14 +17,12 @@ pipeline {
              }
            }
       
-      stage('readfile') {
+      stage('ls') {
          steps {
             script {
                sh "ls -l"
-               def data = readFile(file: 'steps.txt')
-               println(data)
-                        } 
-                    }
+                   } 
                 }
-             }
+              }
+            }
          }
