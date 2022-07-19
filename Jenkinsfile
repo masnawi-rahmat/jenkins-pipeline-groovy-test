@@ -16,5 +16,4 @@ pipeline {
           //steps {
              println ("hello world")
               }
-           }
-        }
+         }
