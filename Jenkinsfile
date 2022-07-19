@@ -20,7 +20,7 @@ pipeline {
                script {
                    //def data = readFile(file: 'zorg.txt')
                    def data = readFile(file: 'steps.txt')
-                   //data.split('\n') 
+                   data.split('\n') 
                    println(data)
                    //println(line)
                }
