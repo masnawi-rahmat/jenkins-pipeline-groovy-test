@@ -1,30 +1,17 @@
 #!groovy
 
 pipeline {
-   agent any
+   agent {any}
    stages {
-       stage('write') {
+       stage('clearspace') {
            steps {
-               script {
-                   def date = new Date()
-                   def data = "Hello World\nSecond line\n" + date
-                   writeFile(file: 'zorg.txt', text: data)
-                   sh "ls -l"
-                   sh "cat zorg.txt"
-                   //sh "head -1 sometext.txt" 
+               println ("clearing space now')
                }
            }
        }
-       stage('read') {
+                          
+       stage('hello') {
            steps {
-               script {
-                   //def data = readFile(file: 'zorg.txt')
-                   def data = readFile(file: 'steps.txt')
-                   data.split('\n') 
-                   println(data)
-                   //println(line)
-               }
-           }
-       }
-   }
-}
+              println ("hello world")
+            }
+        }
