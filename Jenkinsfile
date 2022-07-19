@@ -9,12 +9,11 @@ pipeline {
                cleanWs()
                }
            }
-       }
-  }
-                          
-       /*stage('hello') {
-           steps {
-              println ("hello world")
+       }  
+                    
+       stage('hello') {
+          steps {
+             println ("hello world")
               }
           }
-      }*/
+      }
