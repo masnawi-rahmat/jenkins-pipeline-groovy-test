@@ -20,11 +20,10 @@ pipeline {
       stage('readfile') {
          steps {
             script {
-               def readimage = readFile(file: 'steps.txt')
-                   println(readimage)
+               def data = readFile(file: 'steps.txt')
+               println(data)
                         } 
                     }
                 }
              }
          }
-              
