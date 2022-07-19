@@ -3,7 +3,7 @@
 def stage(String label, Closure cl) {
   println "The stage is ${label}"
   cl()
-  println "Exiting the stage"
+  println "Exit stage"
 }
 
 stage('Say Hello World') {
