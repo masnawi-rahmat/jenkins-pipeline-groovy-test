@@ -11,7 +11,7 @@ pipeline {
                    writeFile(file: 'zorg.txt', text: data)
                    sh "ls -l"
                    sh "cat zorg.txt"
-                   sh "head -1 sometext.txt" 
+                   //sh "head -1 sometext.txt" 
                }
            }
        }
@@ -19,7 +19,7 @@ pipeline {
            steps {
                script {
                    //def data = readFile(file: 'zorg.txt')
-                   def data = readFile(file: 'sometext.txt')
+                   def data = readFile(file: 'steps.txt')
                    //data.split('\n') 
                    println(data)
                    //println(line)
