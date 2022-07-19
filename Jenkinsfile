@@ -22,7 +22,8 @@ pipeline {
             def readfile = readFile(file: 'steps.txt')
             readfile.split('\n').each{ line ->
                println(line)
-              }
-            } 
+                }
+              } 
+            }
           }
         }
