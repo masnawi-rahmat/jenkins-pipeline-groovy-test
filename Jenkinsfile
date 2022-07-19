@@ -2,12 +2,7 @@
 
 pipeline{
   agent any
-  stage('readfie') {
-    steps {
-      script {
-        def data = readFile(file: 'steps.txt')
-        println(data)
-      }
-    }
+  stage('Hello') {
+  println("Hello World")
   }
 }
