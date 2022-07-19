@@ -6,6 +6,7 @@ pipeline {
        stage('clearspace') {
            steps {
                println ("clearing space now")
+               cleanWs()
                }
            }
        }
