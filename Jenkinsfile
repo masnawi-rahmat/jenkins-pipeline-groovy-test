@@ -10,9 +10,9 @@ pipeline {
            }
        }
                           
-       stage('hello') {
+       /*stage('hello') {
            steps {
               println ("hello world")
               }
           }
-      }
+      }*/
