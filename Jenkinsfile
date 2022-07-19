@@ -11,9 +11,3 @@ pipeline {
                }
             }
          }
-   
-       stage('hello') {
-          //steps {
-             println ("hello world")
-              }
-         }
