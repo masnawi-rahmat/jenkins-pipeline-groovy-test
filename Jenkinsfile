@@ -15,4 +15,16 @@ pipeline {
                }
            }
        }
+       stage('read') {
+           steps {
+               script {
+                   //def data = readFile(file: 'zorg.txt')
+                   def data = readFile(file: 'sometext.txt')
+                   //data.split('\n') 
+                   println(data)
+                   //println(line)
+               }
+           }
+       }
    }
+}
