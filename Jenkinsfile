@@ -12,7 +12,7 @@ pipeline {
        }  
                     
        stage('hello') {
-          steps {
+          //steps {
              println ("hello world")
               }
           }
