@@ -19,7 +19,7 @@ pipeline {
                 }
               }
        
-      stage('readfile') {
+      stage('readfile steps.txt') {
          steps {
             script {
                def data = readFile(file: 'steps.txt')
