@@ -5,7 +5,7 @@ pipeline {
    stages {
        stage('clearspace') {
            steps {
-               println ("clearing space now')
+               println ("clearing space now")
                }
            }
        }
