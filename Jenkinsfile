@@ -4,12 +4,6 @@ pipeline {
    agent any
    stages {
                      
-      stage('echo hello world') {
-         steps {
-            println ("hello world")
-             }
-           }
-      
       stage('check list of files and the present working dir') {
          steps {
             script {
@@ -24,9 +18,9 @@ pipeline {
             script {
                def data = readFile(file: 'steps.txt')
                println(data)         
-                        }
-                    }
-               }     
+                   }
+                }
+             }     
 
       stage('check if file steps.txt is in the working dir and echo result accordingly') {
          steps {
@@ -44,9 +38,9 @@ pipeline {
                def steps = readFile(file: 'steps.txt')
                steps.split('\n').each{ line ->
                println (line)
+                  }
                }
-            }
-         }      
+            }      
+         }
       }
    }
-}
