@@ -38,21 +38,12 @@ pipeline {
                }
             }
 
-      stage('checkfortext') {
+      stage('printlinefromfile') {
          steps {
             script {
-               def steps = new File('steps.txt')
-               def lines = steps.readLines()
-
-               lines.each {String line -> println line}
-               println "#########################"
-               String test = "step eight"
-
-               if(lines.contain("step eight")){
-                  println test " is not in the list"
-               }
-               else{
-                  println test " is not in the list"
+               def steps = readFile(file: 'steps.txt')
+               steps.split('\n').each{ line ->
+               println(line)
                }
             }
          }      
