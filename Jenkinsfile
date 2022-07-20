@@ -9,9 +9,9 @@ pipeline {
             script {
                sh "ls -la"
                sh "pwd"
-                   } 
-                }
-              }
+                  } 
+               }
+            }
 
       stage('check if file steps.txt is in the working dir and echo result accordingly') {
          steps {
@@ -28,9 +28,9 @@ pipeline {
             script {
                def steps = readFile(file: 'steps.txt')
                println (steps)         
-                   }
-                }
-             }     
+                  }
+               }
+            }     
 
       stage('read steps.txt file and echo its content line-by-line') {
          steps {
@@ -40,7 +40,26 @@ pipeline {
                println (line)
                   }
                }
-            }      
+            } 
+
+      stage('load path01.groovy script from dir') {
+         steps {
+            script {
+               code = load 'path01.groovy'
+                  }     
+               }
+            }
+
+      stage('execute code sccripted in path01.groovy') {
+        steps {
+           script {
+            code.example1()
+            code.example2()
+                  } 
+               }
+            }
          }
       }
    }
+
+
