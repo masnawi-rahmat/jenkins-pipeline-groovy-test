@@ -4,13 +4,13 @@ pipeline {
    agent any
    stages {
                      
-      stage('hello world') {
+      stage('echo hello world') {
          steps {
             println ("hello world")
              }
            }
       
-      stage('check list of files and the working dir') {
+      stage('check list of files and the present working dir') {
          steps {
             script {
                sh "ls -la"
@@ -28,7 +28,7 @@ pipeline {
                     }
                }     
 
-      stage('check if file steps.txt is in the working dir') {
+      stage('check if file steps.txt is in the working dir and echo result accordingly') {
          steps {
             script {
                if(fileExists('steps.txt'))
