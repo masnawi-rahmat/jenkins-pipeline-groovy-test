@@ -8,6 +8,9 @@ pipeline {
          steps {
             script {
                pintln ("start of pipelne")
+                  }
+               }
+            }
                      
       stage('check list of files and the present working dir') {
          steps {
