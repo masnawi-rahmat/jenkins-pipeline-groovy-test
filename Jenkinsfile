@@ -36,6 +36,25 @@ pipeline {
                else println ("file step.txt is not in the dir")
                   }
                }
-            }      
-         }
+            }
+
+      stage('checkfortext')
+         steps{
+            script{
+               def steps = new File('steps.txt')
+               def lines = steps.readLines()
+
+               lines.each {String line -> println line}
+               println "#########################"
+               String test = "step eight"
+
+               if(lines.contain("step eight")){
+                  println test " is not in the list"
+               }
+               else{
+                  println test " is not in the list"
+               }
+            }
+         }      
       }
+   }
