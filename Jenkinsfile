@@ -12,15 +12,6 @@ pipeline {
                    } 
                 }
               }
-       
-      stage('read and echo the content of steps.txt file') {
-         steps {
-            script {
-               def data = readFile(file: 'steps.txt')
-               println(data)         
-                   }
-                }
-             }     
 
       stage('check if file steps.txt is in the working dir and echo result accordingly') {
          steps {
@@ -31,6 +22,15 @@ pipeline {
                   }
                }
             }
+       
+      stage('read and echo the content of steps.txt file') {
+         steps {
+            script {
+               def steps = readFile(file: 'steps.txt')
+               println(steps)         
+                   }
+                }
+             }     
 
       stage('read steps.txt file and echo its content line-by-line') {
          steps {
