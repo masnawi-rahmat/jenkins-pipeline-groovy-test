@@ -1,3 +1,3 @@
-def code = "process code"
-println(code)
+def script = "process code"
+println (script)
 return
