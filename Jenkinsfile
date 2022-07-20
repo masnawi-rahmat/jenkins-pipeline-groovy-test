@@ -30,7 +30,7 @@ pipeline {
 
       stage('checkforfile') {
          steps {
-            script{
+            script {
                if(fileExists('steps.txt'))
                println ("file steps.txt is in the dir")
                else println ("file step.txt is not in the dir")
@@ -38,9 +38,9 @@ pipeline {
                }
             }
 
-      stage('checkfortext')
-         steps{
-            script{
+      stage('checkfortext') {
+         steps {
+            script {
                def steps = new File('steps.txt')
                def lines = steps.readLines()
 
