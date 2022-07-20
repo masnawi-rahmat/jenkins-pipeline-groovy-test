@@ -52,7 +52,7 @@ pipeline {
                }
             }
 
-      stage('execute code sccripted in path01.groovy') {
+      stage('execute code scripted in path01.groovy') {
         steps {
            script {
             code.example1()
