@@ -32,8 +32,8 @@ pipeline {
          steps {
             script{
                if(fileExists('steps.txt'))
-               println("file steps.txt is in the dir")
-               else println("file step.txt is not in the dir")
+               println ("file steps.txt is in the dir")
+               else println ("file step.txt is not in the dir")
                   }
                }
             }      
