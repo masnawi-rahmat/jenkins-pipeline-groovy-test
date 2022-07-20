@@ -4,13 +4,13 @@ pipeline {
    agent any
    stages {
                      
-      stage('hello') {
+      stage('hello world') {
          steps {
             println ("hello world")
              }
            }
       
-      stage('check list of files and working dir') {
+      stage('check list of files and the working dir') {
          steps {
             script {
                sh "ls -la"
@@ -19,7 +19,7 @@ pipeline {
                 }
               }
        
-      stage('readfile') {
+      stage('readfile and echo steps.txt file') {
          steps {
             script {
                def data = readFile(file: 'steps.txt')
@@ -28,7 +28,7 @@ pipeline {
                     }
                }     
 
-      stage('checkforfile') {
+      stage('check if file steps.txt is in the working dir') {
          steps {
             script {
                if(fileExists('steps.txt'))
@@ -38,7 +38,7 @@ pipeline {
                }
             }
 
-      stage('printlinefromfile') {
+      stage('read steps.txt file and echo its content line-by-line') {
          steps {
             script {
                def steps = readFile(file: 'steps.txt')
