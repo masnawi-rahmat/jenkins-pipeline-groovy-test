@@ -4,6 +4,11 @@ pipeline {
    agent any
    stages {
                      
+      stage('echo start of pipelie') {
+         steps {
+            script {
+               pintln ("start of pipelne")
+                     
       stage('check list of files and the present working dir') {
          steps {
             script {
@@ -46,17 +51,15 @@ pipeline {
       stage('load path01.groovy script from dir') {
          steps {
             script {
-               def code
                code = load 'path01.groovy'
                   }     
                }
             }
 
-      stage('execute code scripted in path01.groovy') {
+      stage('echo end of pipeline') {
         steps {
            script {
-            code.example1()
-            code.example2()
+            println ("end of pipeline')
                   } 
                }
             }
