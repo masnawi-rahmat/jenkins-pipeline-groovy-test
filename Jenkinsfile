@@ -27,7 +27,7 @@ pipeline {
          steps {
             script {
                def steps = readFile(file: 'steps.txt')
-               println(steps)         
+               println (steps)         
                    }
                 }
              }     
