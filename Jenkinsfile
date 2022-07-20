@@ -40,7 +40,8 @@ pipeline {
                println (line)
                   }
                }
-            } 
+            }
+         } 
 
       stage('load path01.groovy script from dir') {
          steps {
@@ -60,6 +61,6 @@ pipeline {
             }
          }
       }
-   }
+   
 
 
