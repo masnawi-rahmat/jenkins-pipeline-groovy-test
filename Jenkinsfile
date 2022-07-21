@@ -59,6 +59,16 @@ pipeline {
                }
             }
 
+      stage('write file path02.groovy, confirm and cat created file') {
+         steps {
+            script {
+               writeFile file: 'path02.groovy', text: 'def script02 = "process code 02"\n println (script02)\n return'
+               sh 'ls -l path02.groovy'
+               sh 'cat path02.groovy'  
+                  }
+               }
+            }
+
       stage('echo end of pipeline') {
          steps {
             script {
