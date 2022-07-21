@@ -69,7 +69,7 @@ pipeline {
                }
             }
 
-      stage('read and find a predefined string in a file and echo string found') {
+      stage('read and find a string in a file and echo string found') {
          steps {
             script {
             def lines = new File('steps.txt').readLines()
