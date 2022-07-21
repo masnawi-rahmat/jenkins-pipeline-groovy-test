@@ -51,7 +51,7 @@ pipeline {
             }
          } 
 
-      stage('load path01.groovy script from dir') {
+      stage('load path01.groovy from dir and execute code script') {
          steps {
             script {
                code = load 'path01.groovy'
