@@ -69,11 +69,10 @@ pipeline {
                }
             }
 
-      stage('read and find a string in a file and echo string found') {
+      stage('read and find a string in a file and echo line containing string') {
          steps {
             script {
-            def lines = new File('steps.txt').readLines()
-            def result = lines.findAll{it.contains('step')}
+            def result = sh(returnStdout: true, script: "cat steps.txt | grep eight")
             println (result)
                   }
                }
