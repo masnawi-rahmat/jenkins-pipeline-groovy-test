@@ -69,6 +69,16 @@ pipeline {
                }
             }
 
+      stage('read and find string in a file and echo string found') {
+         steps {
+            script {
+            def lines = new File('steps.txt').readLines()
+            def result = lines.findAll{it.contains('step')}
+            println result*.toString()
+                  }
+               }
+            }
+
       stage('echo end of pipeline') {
          steps {
             script {
