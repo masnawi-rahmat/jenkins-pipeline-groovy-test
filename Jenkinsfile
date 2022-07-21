@@ -7,7 +7,7 @@ pipeline {
       stage('echo start of pipelie') {
          steps {
             script {
-               pintln ("start of pipelne")
+               println ("start of pipelne")
                   }
                }
             }
