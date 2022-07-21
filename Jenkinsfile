@@ -62,7 +62,7 @@ pipeline {
       stage('echo end of pipeline') {
          steps {
             script {
-               println ("end of pipeline')
+               println ("end of pipeline")
                   } 
                }
             }
