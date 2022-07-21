@@ -74,7 +74,7 @@ pipeline {
             script {
             def lines = new File('steps.txt').readLines()
             def result = lines.findAll{it.contains('step')}
-            println result.toString()
+            println (result)
                   }
                }
             }
