@@ -43,7 +43,7 @@ pipeline {
       stage('read steps.txt file and echo its content line-by-line') {
          steps {
             script {
-               def steps = readFile(file: 'steps.txt', 'steps01.txt')
+               def steps = readFile(file: 'steps.txt'; 'steps01.txt')
                steps.split('\n').each{ line ->
                println (line) 
                   }
