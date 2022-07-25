@@ -46,6 +46,9 @@ pipeline {
                def steps = readFile(file: 'steps.txt')
                steps.split('\n').each{ line ->
                println (line)
+               def steps01 = readFile(file: 'steps01.txt')
+               steps01.split('\n').each{ line01 ->
+               ptintln (line01)
                   }
                }
             }
