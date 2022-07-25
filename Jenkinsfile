@@ -51,7 +51,7 @@ pipeline {
             }
          } 
 
-      sttage('read steps01.txt file and echo its content line-by-line method 2') {
+      stage('read steps01.txt file and echo its content line-by-line method 2') {
          steps {
             script {
                new File("steps01.txt").eachLine { line ->
