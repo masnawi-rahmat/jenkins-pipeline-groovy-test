@@ -56,7 +56,7 @@ pipeline {
             script {
                def steps01 = readFile(file: "steps01.txt")
                steps01.split('\n').each{ line ->
-               println (line)
+               sh "cat "+line+" >> steps03.txt"
                   }
                }
             }
