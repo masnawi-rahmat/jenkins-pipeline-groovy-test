@@ -55,12 +55,21 @@ pipeline {
          steps {
             script {
                def steps01 = readFile(file: "steps01.txt")
+               def newsteps = sh (script: "cat "+line+ " >> newsteps.txt")
                steps01.split('\n').each{ line ->
-               sh "cat "+line+" >> steps03.txt"
+               println (newsteps)
                   }
                }
             }
          }
+      
+      stage('cat newsteps.txt') {
+         steps {
+            script {
+               sh "cat newsteps.txt"
+                 }
+              }
+           }
       
       stage('load path01.groovy from dir and execute code script') {
          steps {
