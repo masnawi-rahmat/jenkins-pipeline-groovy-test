@@ -43,7 +43,7 @@ pipeline {
       stage('read steps.txt file and echo its content line-by-line') {
          steps {
             script {
-               def steps = readFile(file: 'steps.txt')
+               def steps = readFile(file: 'steps.txt' && 'step01.txt')
                steps.split('\n').each{ line ->
                println (line) 
                   }
@@ -51,7 +51,7 @@ pipeline {
             }
          } 
 
-      stage('read steps01.txt file and echo its content line-by-line') {
+      /*stage('read steps01.txt file and echo its content line-by-line') {
          steps {
             script {
                def steps01 = readFile(file: "steps01.txt")
@@ -61,15 +61,15 @@ pipeline {
                   }
                }
             }
-         }
+         }*/
       
-      stage('cat newsteps.txt') {
+      /*stage('cat newsteps.txt') {
          steps {
-            script {
+           script {
                sh "cat newsteps.txt"
                  }
               }
-           }
+           }*/
       
       stage('load path01.groovy from dir and execute code script') {
          steps {
