@@ -51,7 +51,7 @@ pipeline {
             }
          }
 
-      stage('cat newsteps.txt') {
+      stage('fist cat newsteps.txt') {
          steps {
             script {
                sh "cat newsteps.txt"
@@ -70,7 +70,7 @@ pipeline {
          }
       }
       
-      stage('cat newsteps.txt') {
+      stage('second cat newsteps.txt') {
          steps {
            script {
                sh "cat newsteps.txt"
