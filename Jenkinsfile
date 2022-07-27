@@ -114,6 +114,7 @@ pipeline {
             }
          }
       }
+}
 
 post {
    always {
@@ -132,5 +133,5 @@ post {
    ustable {
       echo "Ustable Deployment"
       }   
-      
-   }
+   }      
+}
