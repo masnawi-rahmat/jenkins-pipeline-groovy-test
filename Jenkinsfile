@@ -40,7 +40,7 @@ pipeline {
                }
             }     
 
-      stage('read steps.txt file and echo its content line-by-line into an new newsteps.txt file') {
+      stage('read steps.txt file and echo its content line-by-line into a new newsteps.txt file') {
          steps {
             script {
                def steps = readFile(file: "steps.txt")
@@ -59,7 +59,7 @@ pipeline {
          }
       }
 
-      stage('read steps01.txt file and echo and insert its content line-by-line into newsteps.txt file') {
+      stage('read steps01.txt file and echo and apend its content line-by-line into newsteps.txt file') {
          steps {
             script {
                def steps01 = readFile(file: "steps01.txt")
@@ -132,4 +132,4 @@ pipeline {
          echo "Ustable Deployment"
          }   
       }
-}
+   }
