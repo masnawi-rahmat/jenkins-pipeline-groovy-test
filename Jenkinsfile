@@ -45,7 +45,7 @@ pipeline {
             script {
                def steps = readFile(steps.txt) //&& 'step01.txt')
                steps.split('\n').each{ line ->
-               for(line in line)
+               for line in lineupdate jenkinsfile
                println ("test {+line+}")
                   }
                } 
