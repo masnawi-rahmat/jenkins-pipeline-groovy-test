@@ -128,7 +128,7 @@ pipeline {
          echo "Failed Deployment"
          }
 
-      ustable {
+      unstable {
          echo "Ustable Deployment"
          }   
       }
