@@ -114,22 +114,21 @@ pipeline {
             }
          }
       
-
-post {
-   always {
-      deleteDir()
-      echo "Cleaning Up"
-      }
+   post {
+      always {
+         deleteDir()
+         echo "Cleaning Up"
+         }
    
-   success {
-      echo "Successful Deployment"
-      }
+      success {
+         echo "Successful Deployment"
+         }
 
-   failure {
-      echo "Failed Deployment"
-      }
+      failure {
+         echo "Failed Deployment"
+         }
 
-   ustable {
-      echo "Ustable Deployment"
-      }   
+      ustable {
+         echo "Ustable Deployment"
+         }   
    }
