@@ -45,7 +45,8 @@ pipeline {
             script {
                def steps = readFile(file: "steps.txt") //&& 'step01.txt')
                steps.split('\n').each{ line ->
-               println "test ${line}"
+               sh "echo ${line} >> newsteps.txt"
+               sh "ls -la"
                   }
                } 
             }
