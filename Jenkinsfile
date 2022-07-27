@@ -52,7 +52,7 @@ pipeline {
          }
 
       stage('cat newsteps.txt') {
-         step {
+         steps {
             script {
                sh "cat newsteps.txt"
             }
