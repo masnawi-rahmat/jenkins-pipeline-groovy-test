@@ -51,7 +51,7 @@ pipeline {
             }
          }
 
-      stage('fist cat newsteps.txt') {
+      stage('first cat newsteps.txt') {
          steps {
             script {
                sh "cat newsteps.txt"
@@ -59,7 +59,7 @@ pipeline {
          }
       }
 
-      stage('read steps01.txt file and echo and apend its content line-by-line into newsteps.txt file') {
+      stage('read steps01.txt file and echo and append its content line-by-line into newsteps.txt file') {
          steps {
             script {
                def steps01 = readFile(file: "steps01.txt")
@@ -70,10 +70,11 @@ pipeline {
          }
       }
       
-      stage('second cat newsteps.txt') {
+      stage('second cat newsteps.txt and remove same file') {
          steps {
            script {
                sh "cat newsteps.txt"
+               sh "rm newsteps.txt"
             }
          }
       }
@@ -91,7 +92,8 @@ pipeline {
             script {
                writeFile file: 'path02.groovy', text: 'def script02 = "process code 02"\nprintln (script02)\nreturn'
                sh 'ls -l path02.groovy'
-               sh 'cat path02.groovy'  
+               sh 'cat path02.groovy'
+               sh "ls -la"
                   }
                }
             }
@@ -116,7 +118,7 @@ pipeline {
       
    post {
       always {
-         deleteDir()
+         //deleteDir()
          echo "Cleaning Up"
          }
    
