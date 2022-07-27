@@ -40,17 +40,24 @@ pipeline {
                }
             }     
 
-      stage('read steps.txt file and echo its content line-by-line') {
+      stage('read steps.txt file and echo its content line-by-line into an new newsteps.txt') {
          steps {
             script {
-               def steps = readFile(file: "steps.txt") //&& 'step01.txt')
+               def steps = readFile(file: "steps.txt")
                steps.split('\n').each{ line ->
                sh "echo ${line} >> newsteps.txt"
-               sh "ls -la"
                   }
                } 
             }
-         } 
+         }
+
+      stage('cat newsteps.txt') {
+         step {
+            script {
+               sh "cat newsteps.txt"
+            }
+         }
+      }
 
       /*stage('read steps01.txt file and echo its content line-by-line') {
          steps {
