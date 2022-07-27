@@ -59,25 +59,24 @@ pipeline {
          }
       }
 
-      /*stage('read steps01.txt file and echo its content line-by-line') {
+      stage('read steps01.txt file and echo and insert its content line-by-line into newsteps.txt file') {
          steps {
             script {
                def steps01 = readFile(file: "steps01.txt")
-               def newsteps = sh (script: "cat "+line+ " >> newsteps.txt")
                steps01.split('\n').each{ line ->
-               println (newsteps)
-                  }
+               sh "echo ${line} >> newsteps.txt"
                }
             }
-         }*/
+         }
+      }
       
-      /*stage('cat newsteps.txt') {
+      stage('cat newsteps.txt') {
          steps {
            script {
                sh "cat newsteps.txt"
-                 }
-              }
-           }*/
+            }
+         }
+      }
       
       stage('load path01.groovy from dir and execute code script') {
          steps {
