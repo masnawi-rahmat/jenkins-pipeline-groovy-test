@@ -63,8 +63,8 @@ pipeline {
          steps {
             script {
                def steps01 = readFile(file: "steps01.txt")
-               steps01.split('\n').each{ line ->
-               sh "echo ${line} >> newsteps.txt"
+               steps01.split('\n').each{ line01 ->
+               sh "echo ${line01} >> newsteps.txt"
                }
             }
          }
