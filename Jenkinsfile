@@ -114,3 +114,25 @@ pipeline {
             }
          }
       }
+
+}
+
+post {
+   always {
+      deleteDir()
+      echo "Cleaning Up"
+   }
+      
+   success {
+      echo "Successful Deployment"
+   }
+
+   failure {
+      echo "Failed Deployment"
+   }
+
+   ustable {
+      echo "Ustable Deployment"
+   }   
+      
+}
