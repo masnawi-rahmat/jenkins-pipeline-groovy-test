@@ -116,7 +116,7 @@ pipeline {
       
    post {
       always {
-         deleteDir()
+         //deleteDir()
          echo "Cleaning Up"
          }
    
@@ -129,7 +129,7 @@ pipeline {
          }
 
       unstable {
-         echo "Ustable Deployment"
+         echo "Unstable Deployment"
          }   
       }
    }

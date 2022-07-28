@@ -131,7 +131,7 @@ pipeline {
          }
 
       unstable {
-         echo "Ustable Deployment"
+         echo "Unstable Deployment"
          }   
       }
    }
