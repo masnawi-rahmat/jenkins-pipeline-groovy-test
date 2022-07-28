@@ -15,8 +15,10 @@ pipeline {
       stage('check list of files and the present working dir') {
          steps {
             script {
-               sh "ls -la"
-               sh "pwd"
+               sh ''' 
+               ls -la
+               pwd
+               '''
                   } 
                }
             }
@@ -73,8 +75,10 @@ pipeline {
       stage('second cat newsteps.txt and remove same file') {
          steps {
            script {
-               sh "cat newsteps.txt"
-               sh "rm newsteps.txt"
+               sh '''
+               cat newsteps.txt
+               rm newsteps.txt
+               '''
             }
          }
       }
@@ -91,9 +95,11 @@ pipeline {
          steps {
             script {
                writeFile file: 'path02.groovy', text: 'def script02 = "process code 02"\nprintln (script02)\nreturn'
-               sh 'ls -l path02.groovy'
-               sh 'cat path02.groovy'
-               sh "ls -la"
+               sh '''
+               ls -l path02.groovy
+               cat path02.groovy
+               ls -la
+               '''
                   }
                }
             }
