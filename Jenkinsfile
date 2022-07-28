@@ -99,6 +99,8 @@ pipeline {
                ls -l path02.groovy
                cat path02.groovy
                ls -la
+               rm path02.groovy
+               ls
                '''
                   }
                }
