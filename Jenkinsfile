@@ -16,7 +16,7 @@ pipeline {
          steps {
             script {
                sh ''' 
-               ls -la
+               ls
                pwd
                '''
                   } 
@@ -98,7 +98,7 @@ pipeline {
                sh '''
                ls -l path02.groovy
                cat path02.groovy
-               ls -la
+               ls
                rm path02.groovy
                ls
                '''
