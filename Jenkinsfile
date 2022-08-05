@@ -113,11 +113,11 @@ pipeline {
                   cat pathnotfound.groovy
                   ls
                   '''
-                   }
-               }
-            }
+                    }
+                }
+             }
 
-         }
+          }
 
       stage('read and find a string in a file and echo line containing string') {
          steps {
