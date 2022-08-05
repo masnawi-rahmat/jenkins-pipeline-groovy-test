@@ -117,6 +117,8 @@ pipeline {
                }
             }
 
+         }
+
       stage('read and find a string in a file and echo line containing string') {
          steps {
             script {
@@ -154,4 +156,3 @@ pipeline {
          }   
       }
    }
-}
