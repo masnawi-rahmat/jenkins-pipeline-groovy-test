@@ -95,7 +95,7 @@ pipeline {
          steps {
             script {
                if(fileExists('path01.groovy'))
-               println ("file path01.groovy found")
+                  println ("file path01.groovy found")
                   writeFile file: 'path02.groovy', text: 'def script02 = "process code 02"\nprintln (script02)\nreturn'
                   sh '''
                   ls -l path02.groovy
