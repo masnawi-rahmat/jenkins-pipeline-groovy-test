@@ -53,7 +53,7 @@ pipeline {
             }
          }
 
-      stage('first cat newsteps.txt') {
+      stage('cat newsteps.txt') {
          steps {
             script {
                sh "cat newsteps.txt"
@@ -72,7 +72,7 @@ pipeline {
          }
       }
       
-      stage('second cat newsteps.txt and remove same file') {
+      stage('cat newsteps.txt again and remove same file') {
          steps {
            script {
                sh '''
@@ -91,7 +91,7 @@ pipeline {
                }
             }
 
-stage('if file path01.groovy exists, write file path02.groovy, confirm and cat created file; else write file pathnotfound.groovy') {
+      stage('if file path01.groovy exists; write, comfirm and cat file path02.groovy; else write file pathnotfound.groovy') {
          steps {
             script {
                if(fileExists('path01.groovy')) {
@@ -119,7 +119,7 @@ stage('if file path01.groovy exists, write file path02.groovy, confirm and cat c
 
           }
 
-      stage('read and find a string in a file and echo line containing string') {
+      stage('read and find a string in file steps.txt and echo line containing string') {
          steps {
             script {
             def result = sh(returnStdout: true, script: "cat steps.txt | grep eight")
