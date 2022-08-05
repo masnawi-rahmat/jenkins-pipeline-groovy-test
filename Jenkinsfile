@@ -91,7 +91,7 @@ pipeline {
                }
             }
 
-      stage('write file path02.groovy, confirm and cat created file') {
+stage('if file path01.groovy exists, write file path02.groovy, confirm and cat created file; else write file pathnotfound.groovy') {
          steps {
             script {
                if(fileExists('path01.groovy')) {
