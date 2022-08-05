@@ -28,7 +28,6 @@ pipeline {
             script {
                if(fileExists('steps.txt'))
                println ("file steps.txt is in the dir")
-               sh "ls"
                else println ("file step.txt is not in the dir")
                   }
                }
@@ -95,7 +94,7 @@ pipeline {
       stage('write file path02.groovy, confirm and cat created file') {
          steps {
             script {
-               if(fileExists('path01.groovy'))
+               if(fileExists('path01.groovy')) {
                println ("file path01.groovy found")
                writeFile file: 'path02.groovy', text: 'def script02 = "process code 02"\nprintln (script02)\nreturn'
                sh '''
@@ -105,13 +104,15 @@ pipeline {
                rm path02.groovy
                ls
                '''
-               /*else println ("file path01.groovy is not found and writing file pathnotfound.groovy")
-               writeFile file: 'pathnotfound.groovy', text: 'def script03 = "process code 03"\nprintln (script03)\nreturn'
-               sh '''
-               ls -l pathnotfound.groovy
-               cat pathnotfound.groovy
-               ls
-               '''*/
+               }
+               else {
+                  println ("file path01.groovy is not found and writing file pathnotfound.groovy")
+                  writeFile file: 'pathnotfound.groovy', text: 'def script03 = "process code 03"\nprintln (script03)\nreturn'
+                  sh '''
+                  ls -l pathnotfound.groovy
+                  cat pathnotfound.groovy
+                  ls
+                  '''
                    }
                }
             }
