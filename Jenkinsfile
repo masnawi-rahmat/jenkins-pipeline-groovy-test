@@ -104,13 +104,13 @@ pipeline {
                rm path02.groovy
                ls
                '''
-               else println ("file path01.groovy is not found and writing file pathnotfound.groovy")
+               /*else println ("file path01.groovy is not found and writing file pathnotfound.groovy")
                writeFile file: 'pathnotfound.groovy', text: 'def script03 = "process code 03"\nprintln (script03)\nreturn'
                sh '''
                ls -l pathnotfound.groovy
                cat pathnotfound.groovy
                ls
-               '''
+               '''*/
                    }
                }
             }
