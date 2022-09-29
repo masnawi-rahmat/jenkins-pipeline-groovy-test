@@ -47,11 +47,12 @@ pipeline {
             script {
                def steps = readFile(file: "steps.txt")
                steps.split('\n').each{ line ->
+               println(line)
                if(line.equals("step three")){
                   line = line+1
                }else{
                   line = line
-                  println(line)
+                  }
                } 
             }
          }    
