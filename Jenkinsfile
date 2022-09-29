@@ -52,7 +52,6 @@ pipeline {
                }else{
                   line = line
                   println(line)
-                  }
                } 
             }
          }    
