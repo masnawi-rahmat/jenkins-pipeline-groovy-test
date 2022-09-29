@@ -51,7 +51,6 @@ pipeline {
                   line = line+1
                }else{
                   line = line
-                     }
                   println(line)
                   }
                } 
