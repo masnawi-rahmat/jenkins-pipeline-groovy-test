@@ -47,16 +47,16 @@ pipeline {
             script {
                def steps = readFile(file: "steps.txt")
                steps.split('\n').each{ line ->
-               if(line.equals("step three")){
-                  line = line+1
-                  }else{
-                     line = line
-                        }
-                     println(line)
+               println(line)
                   }
-               } 
-            }
-         }    
+                  if(line.equals("step three")){
+                     sh"echo 'hit'"
+                  }else{
+                     sh"echo 'no hit'"
+                     }
+                  } 
+               }
+            }    
          
       stage('2 read steps.txt file and echo its content line-by-line into a new newsteps.txt file') {
          steps {
