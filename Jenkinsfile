@@ -45,17 +45,10 @@ pipeline {
       stage('read steps.txt file and echo its content line-by-line into a new newsteps.txt file') {
          steps {
             script {
-               /*def steps = readFile(file: "steps.txt")
-               steps.split('\n').each{ line ->
-               sh "echo ${line} >> newsteps.txt"*/
                def steps = readFile(file: "steps.txt")
                steps.split('\n').each{ line ->
-                  if(line.equals("step three")){
-                     line = line+1
-                  }else{
-                     line = line
-                     }
-               println(line)
+               sh "echo ${line} >> newsteps.txt"
+                  }
                } 
             }
          }
@@ -74,7 +67,7 @@ pipeline {
                def steps01 = readFile(file: "steps01.txt")
                steps01.split('\n').each{ line01 ->
                sh "echo ${line01} >> newsteps.txt"
-               
+               }
             }
          }
       }
