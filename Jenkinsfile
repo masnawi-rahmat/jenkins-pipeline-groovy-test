@@ -50,7 +50,7 @@ pipeline {
                println(line)
                } 
                if(line.equals("step three")){
-                  line = line+1
+                  line = line++
                   }else{
                      line = line
                      println(line)
