@@ -47,12 +47,7 @@ pipeline {
             script {
                def steps = readFile(file: "steps.txt")
                steps.split('\n').each{ line ->
-               println(line)
-                  }
-                  if(line.equals("step three")){
-                     sh"echo 'hit'"
-                  }else{
-                     sh"echo 'no hit'"
+               println(line+1)
                      }
                   } 
                }
