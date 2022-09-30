@@ -47,12 +47,13 @@ pipeline {
             script {
                def steps = readFile(file: "steps.txt")
                steps.split('\n').each{ line ->
-               println(line)
+               //println(line)
                if(line.equals("step three")){
                   line = "step three new"
                }else{
                   line = line
                         }
+               println(line)      
                      }
                   } 
                }
